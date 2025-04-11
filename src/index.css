@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb;
+}
+
+/* カードスタイルのカスタマイズ */
+.cheatsheet-card {
+  display: flex;
+  padding: 0.75rem;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  position: relative;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 0.5rem;
+  min-height: 3.5rem;
+}
+
+.cheatsheet-title {
+  font-weight: 700;
+  font-size: 1rem;
+  min-width: 130px;
+  max-width: 130px;
+  margin-right: 1rem;
+  padding-right: 0.5rem;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+}
+
+.cheatsheet-method {
+  font-size: 0.875rem;
+  white-space: pre-wrap;
+  flex: 1;
+  margin-top: 0.25rem;
+}
+
+.remove-button {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  color: #9ca3af;
+}
+
+.remove-button:hover {
+  color: #ef4444;
+}
+
+/* 印刷用のスタイル */
+@media print {
+  body {
+    background-color: white;
+  }
+  
+  .container {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  
+  .print\:hidden {
+    display: none !important;
+  }
+  
+  /* A4レイアウト */
+  @page {
+    size: A4 landscape;
+    margin: 10mm;
+  }
+  
+  /* 印刷時のカードスタイル */
+  .cheatsheet-card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    border: 1px solid #e5e7eb;
+    box-shadow: none;
+  }
+
+}

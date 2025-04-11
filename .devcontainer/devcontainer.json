@@ -1,0 +1,12 @@
+{
+  "name": "CheatSheet Dev Container",
+  "dockerComposeFile": "../docker/docker-compose.yml",
+  "service": "cheatsheet",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
+}
+

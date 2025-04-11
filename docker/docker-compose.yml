@@ -1,0 +1,11 @@
+services:
+  cheatsheet:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ..:/workspace
+    working_dir: /workspace
+    command: npm run start
