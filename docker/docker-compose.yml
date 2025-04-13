@@ -3,9 +3,11 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile
+      target: develop
     ports:
       - "3000:3000"
     volumes:
       - ..:/workspace
+      - /workspace/node_modules
     working_dir: /workspace
     command: npm run start

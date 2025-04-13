@@ -38,3 +38,8 @@ tailwind.config.js
 
 # Coverage
 coverage/
+
+/.firebase
+/firebase-adminsdk.json
+*.memo
+*.memo.md

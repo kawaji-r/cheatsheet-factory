@@ -91,7 +91,7 @@ const App: React.FC = () => {
       <div className="mt-5 print:hidden">
         <button
           onClick={() => window.print()}
-          className="bg-green-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="bg-emerald-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500"
         >
           印刷
         </button>
@@ -105,7 +105,7 @@ const App: React.FC = () => {
             id="sheetTitle"
             value={sheetTitle}
             onChange={(e) => setSheetTitle(e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
             placeholder="チートシートのタイトルを入力してください"
           />
         </section>
@@ -120,7 +120,7 @@ const App: React.FC = () => {
                 id="title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
                 required
               />
             </div>
@@ -131,7 +131,7 @@ const App: React.FC = () => {
                 id="method"
                 value={method}
                 onChange={(e) => setMethod(e.target.value)}
-                className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[120px]"
+                className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-500 min-h-[120px]"
                 required
               />
             </div>
@@ -139,7 +139,7 @@ const App: React.FC = () => {
             <div className="flex justify-between">
               <button
                 type="submit"
-                className="bg-blue-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-sky-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-500"
               >
                 登録
               </button>
@@ -152,12 +152,12 @@ const App: React.FC = () => {
           <textarea
             value={jsonInput}
             onChange={(e) => setJsonInput(e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[200px]"
+            className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-500 min-h-[200px]"
           />
           <div className="mt-4 flex justify-end">
             <button
               onClick={saveJson}
-              className="bg-blue-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="bg-sky-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-500"
             >
               保存
             </button>
