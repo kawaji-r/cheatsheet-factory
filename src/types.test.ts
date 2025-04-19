@@ -1,4 +1,4 @@
-import { CheatSheetItem } from './App';
+import type { CheatSheetItem } from './App';
 
 describe('CheatSheetItem Interface', () => {
   test('has required properties', () => {

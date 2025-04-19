@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
 
-interface CheatSheetItem {
+export interface CheatSheetItem {
   id: string;
   title: string;
   method: string;
