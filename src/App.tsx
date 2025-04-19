@@ -7,25 +7,30 @@ interface CheatSheetItem {
   method: string;
 }
 
-const STORAGE_KEY = 'cheatsheet-items';
+const STORAGE_KEY_ITEMS = 'cheatsheet-items';
+const STORAGE_KEY_TITLE = 'cheatsheet-title';
 
 const App: React.FC = () => {
   const [title, setTitle] = useState('');
   const [method, setMethod] = useState('');
   const [jsonInput, setJsonInput] = useState('');
-  const [sheetTitle, setSheetTitle] = useState(''); // チートシートタイトルの状態を追加
+  const [sheetTitle, setSheetTitle] = useState(() => {
+    const storedTitle = localStorage.getItem(STORAGE_KEY_TITLE);
+    return storedTitle || '';
+  });
 
   // LocalStorage から初期値を取得
   const [items, setItems] = useState<CheatSheetItem[]>(() => {
-    const storedItems = localStorage.getItem(STORAGE_KEY);
+    const storedItems = localStorage.getItem(STORAGE_KEY_ITEMS);
     return storedItems ? JSON.parse(storedItems) : [];
   });
 
   // LocalStorage に保存
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+    localStorage.setItem(STORAGE_KEY_ITEMS, JSON.stringify(items));
+    localStorage.setItem(STORAGE_KEY_TITLE, sheetTitle);
     setJsonInput(JSON.stringify(items, null, 2));
-  }, [items]);
+  }, [items, sheetTitle]);
 
   // 新しい項目を追加
   const addItem = (e: React.FormEvent) => {
@@ -82,8 +87,8 @@ const App: React.FC = () => {
             >
               ×
             </button>
-            <div className="text-lg min-w-[120px] mr-4 pr-2">{item.title}</div>
-            <div className="text-md whitespace-pre-wrap flex-1">{item.method}</div>
+            <div className="text-sm min-w-[120px] mr-4 pr-2 flex-1">{item.title}</div>
+            <div className="text-sm whitespace-pre-wrap flex-1">{item.method}</div>
           </div>
         ))}
       </div>

@@ -43,3 +43,4 @@ coverage/
 /firebase-adminsdk.json
 *.memo
 *.memo.md
+.aider*
