@@ -1,5 +1,5 @@
 ## セットアップ
-### Firebase Admin SDKの秘密鍵の配置
+### Firebase Admin SDKの秘密鍵の配置（Firebaseへのリリースを行わう場合）
 FirebaseコンソールからFirebase Admin SDKの秘密鍵をダウンロードし、firebase-adminsdk.json として配置してください。
 
 ## TODO
